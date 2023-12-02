@@ -138,45 +138,45 @@ void setup() {
 
 void loop() {
 
-	int x, y, z, a, b;
-	char myArray[3];
-	
-	compass.read();
+    int x, y, z, a, b;
+    char myArray[3];
+    
+    compass.read();
   
-	x = compass.getX();
-	y = compass.getY();
-	z = compass.getZ();
-	
-	a = compass.getAzimuth();
-	
-	b = compass.getBearing(a);
+    x = compass.getX();
+    y = compass.getY();
+    z = compass.getZ();
+    
+    a = compass.getAzimuth();
+    
+    b = compass.getBearing(a);
 
-	compass.getDirection(myArray, a);
+    compass.getDirection(myArray, a);
   
   
-	Serial.print("X: ");
-	Serial.print(x);
+    Serial.print("X: ");
+    Serial.print(x);
 
-	Serial.print(" Y: ");
-	Serial.print(y);
+    Serial.print(" Y: ");
+    Serial.print(y);
 
-	Serial.print(" Z: ");
-	Serial.print(z);
+    Serial.print(" Z: ");
+    Serial.print(z);
 
-	Serial.print(" Azimuth: ");
-	Serial.print(a);
+    Serial.print(" Azimuth: ");
+    Serial.print(a);
 
-	Serial.print(" Bearing: ");
-	Serial.print(b);
+    Serial.print(" Bearing: ");
+    Serial.print(b);
 
-	Serial.print(" Direction: ");
-	Serial.print(myArray[0]);
-	Serial.print(myArray[1]);
-	Serial.print(myArray[2]);
+    Serial.print(" Direction: ");
+    Serial.print(myArray[0]);
+    Serial.print(myArray[1]);
+    Serial.print(myArray[2]);
 
-	Serial.println();
+    Serial.println();
 
-	delay(250);
+    delay(250);
 }
 ```
 
@@ -215,27 +215,27 @@ The values to set each mode are in the table below and were taken from the [QST 
 
 | MODE CONTROL (MODE)     | Value |
 | ----------------------- | ----- |
-| Standby		          | 0x00  |
-| Continuous	          | 0x01  |
+| Standby                 | 0x00  |
+| Continuous              | 0x01  |
 
 | OUTPUT DATA RATE (ODR)  | Value |
 | ----------------------- | ----- |
-| 10Hz		              | 0x00  |
-| 50Hz		              | 0x04  |
-| 100Hz		              | 0x08  |
-| 200Hz		              | 0x0C  |
+| 10Hz                    | 0x00  |
+| 50Hz                    | 0x04  |
+| 100Hz                   | 0x08  |
+| 200Hz                   | 0x0C  |
 
 | FULL SCALE (RNG)        | Value |
 | ----------------------- | ----- |
-| 2G			          | 0x00  |
-| 8G			          | 0x10  |
+| 2G                      | 0x00  |
+| 8G                      | 0x10  |
 
 | OVER SAMPLE RATIO (OSR) | Value |
 | ----------------------- | ----- |
-| 64			          | 0xC0  |
-| 128			          | 0x80  |
-| 256			          | 0x40  |
-| 512			          | 0x00  |
+| 64                      | 0xC0  |
+| 128                     | 0x80  |
+| 256                     | 0x40  |
+| 512                     | 0x00  |
 
 ---
 
@@ -285,6 +285,6 @@ It is recommended that you use the provided calibration sketch to generate your 
 
 Special thanks is given to the following individuals who have contributed to this library:
 
-	- Claus Näveke : [TheNitek](https://github.com/TheNitek) for adding calibration functions to the library.
- 	- Paulo C. B. Sincos : [paulosincos](https://github.com/paulosincos)https://github.com/paulosincos) for enhancements to the calibration script.
-  	- ATsaruk : [ATsaruk](https://github.com/ATsaruk) for enhancements to the calibration script.
+    - Claus Näveke : [TheNitek](https://github.com/TheNitek) for adding calibration functions to the library.
+    - Paulo C. B. Sincos : [paulosincos](https://github.com/paulosincos)https://github.com/paulosincos) for enhancements to the calibration script.
+    - ATsaruk : [ATsaruk](https://github.com/ATsaruk) for enhancements to the calibration script.
